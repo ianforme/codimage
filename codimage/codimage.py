@@ -1,4 +1,4 @@
-from utils import *
+from codimage.utils import *
 
 class Codimage:
 
