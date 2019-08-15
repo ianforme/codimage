@@ -1,6 +1,6 @@
 # codimage
 
-codimage is a Python library that encrypts single / multiple text-transferrable files, i.e. Python scripts, batch scripts and configuration files, into a single picture and protect your information with password.
+codimage is a Python library that encrypts single / multiple text-transferable files, i.e. Python scripts, batch scripts and configuration files, into a single picture and protect your information with password.
 
 ## Overview
 
@@ -26,10 +26,10 @@ pip install codimage
 from codimage import codimage
 
 codimage = codimage.Codimage()
-codimage.encrypt(original-png-file-path,
-                 path-to-the-file,
-                 export-pnd-file-path,
-                 password)
+codimage.encrypt(r"D:\dummy\dummy.png",
+                 r"D:\codes\test.py",
+                 r"D:\dummy\code.png",
+                 "P@ssw0rd1")
 ```
 
 #### Multiple files encryption
@@ -37,10 +37,10 @@ codimage.encrypt(original-png-file-path,
 assume files to be encrypted are in D:\codes folder
 
 ```python
-codimage.encrypt(original-png-file-path,
+codimage.encrypt(r"D:\dummy\dummy.png",
                  r"D:\codes",
-                 export-pnd-file-path,
-                 password)
+                 r"D:\dummy\code.png",
+                 "P@ssw0rd1")
 ```
 
 #### Image decryption
@@ -48,10 +48,10 @@ codimage.encrypt(original-png-file-path,
 assume files are to be exported to D:\export-codes
 
 ```python
-codimage.decrypt(original-png-file-path,
-                 encrypted-png-file-path,
+codimage.decrypt(r"D:\dummy\dummy.png",
+                 r"D:\dummy\code.png",
                  r"D:\export-codes",
-                 password)
+                 "P@ssw0rd1")
 ```
 
 After decryption,  a folder named 'codimage-*datetime*' will be created in export-codes with all files inside
